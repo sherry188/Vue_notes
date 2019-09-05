@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <div id="root">
+    <div @click="handleClick">
+      {{content}}
+    </div>  
+    <!-- {{}}  v-text  v-html  v-on:click /@click 绑定事件-->
+  </div>
+
+  <script>
+    new Vue({
+      el:'#root',
+      data: {
+        content:'hello'
+      },
+      methods:{
+        handleClick : function () {
+          this.content='world'
+        } 
+      }
+    })
+
+    // var dom=document.getElementById('root');
+    // dom.innerHTML='aaaa';
+  </script>
+</body>
+</html>
